@@ -1,0 +1,36 @@
+name: Tests
+
+on: [push]
+
+jobs:
+  test-latest:
+    name: Test on Latest
+    runs-on: ubuntu-latest
+    container: 01walid/pg_branch_dev_container:main
+
+    services:
+      # Label used to access the service container
+      postgres:
+        # Docker Hub image
+        image: postgres:14.1
+        # Provide the password for postgres
+        env:
+          POSTGRES_PASSWORD: postgres
+        # Set health checks to wait until postgres has started
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - uses: actions/checkout@v1
+      # - uses: actions-rs/toolchain@v1
+      #   with:
+      #     toolchain: stable
+      #     profile: minimal
+      #     override: true
+      # - name: Install required cargo tools
+      #   run: cargo install cargo-insta
+      - name: Test
+        run: make test
