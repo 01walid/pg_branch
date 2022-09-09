@@ -1,0 +1,7 @@
+{
+  "editor.formatOnSave": true,
+  "rust-analyzer.checkOnSave.allFeatures": true,
+  "rust-analyzer.cargo.allFeatures": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true
+}

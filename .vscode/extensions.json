@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "matklad.rust-analyzer",
+    "bungcip.better-toml",
+    "vadimcn.vscode-lldb",
+    "usernamehw.errorlens",
+    "serayuzgur.crates",
+    "mitsuhiko.insta"
+  ]
+}
