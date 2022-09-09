@@ -1,0 +1,6 @@
+---
+source: tests/cli_snapshot_testing.rs
+expression: msg
+---
+pg_branch 0.1.0
+
