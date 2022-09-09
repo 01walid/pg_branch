@@ -1,0 +1,10 @@
+.vscode/*.log
+
+/target
+.DS_Store
+
+.env
+!.devcontainer/.env
+
+.pg_branch
+
