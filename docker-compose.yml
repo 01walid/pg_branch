@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  postgres:
+    image: postgres:13-alpine
+    restart: unless-stopped
+    volumes:
+      - db:/var/lib/postgresql/data
+    env_file:
+        # Ensure that the variables in .env match the same variables in devcontainer.json
+        - .env
+    ports:
+      - 5432:5432
+
+volumes:
+  db:
+
