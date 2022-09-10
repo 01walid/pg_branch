@@ -16,6 +16,11 @@
 
 **Warning**: This is a work in progress.
 
+## Why?
+Ever wanted to test a migration in isolation? then revert back to your main development database quickly? Or test a pull request or a feature-branch without the need to give up your development database's data or schema.
+
+`pg_branch` goal is to help provide quick copies of your current development database, then help you manage those copies (drop, rename, cleanup, ..etc). This is especially usefull when provisioning "preview environments" that are a copy of staging/prod, e.g. a database per Vercel PR preview.
+
 
 ## Demo
 
